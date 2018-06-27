@@ -5,7 +5,7 @@ Leer stap voor stap games programmeren.
 ## Wat kun je er mee?
 
 - [Arkanoid](demos/arkanoid/arkanoid.html)
-- [Arkanoid2](demos/arkanoid2/arkanoid2.html)
+- [Nog een Arkanoid](demos/arkanoid2/arkanoid2.html)
 - [Platformer](demos/platformer/platformer.html)
 - [Space](demos/space/space.html)
 
@@ -26,5 +26,6 @@ De code voor die oefeningen zet je op je eigen computer en kan je dan zelf aan g
 - Pak het bestand uit
 - Open `demos/oefening1/index.html` in de browser (Chrome, Safari, Edge of Internet Explorer bijvoorbeeld). Dit werkt meestal door er op te dubbelklikken.
 - Open `demos/oefening1/index.js` in Kladblok (Windows) of TextEdit (mac).
+- *Optioneel: echte programmeurs gebruiken een code editor. Die helpt je bijvoorbeeld door kleurcoderingen en regelnummers. Je kunt zelf bijvoorbeeld [Visual Studio Code](https://code.visualstudio.com/) installeren, en die gebruiken in plaats van Kladblok of TextEdit.*
 - Volg de aanwijzingen die je in het `js` bestand vindt. Dit doe je door de code in Kladblok/TextEdit aan te passen en op te slaan. Als je daarna je browser ververst dan werkt de nieuwe code.
 - Zo kun je één voor één de oefeningen doen, totdat je een volleerd programmeur bent en je eigen games kunt maken!

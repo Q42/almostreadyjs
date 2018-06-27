@@ -1,9 +1,15 @@
 /**
- * Als het goed is zie je nu een ruimteschip in je browser.
- * Die wordt getekend door de code hieronder. 
- * 
- * De eerste regel maakt een variabele aan
- * en zegt welk plaatje gebruikt wordt (images/schip.png). 
+ * Als eerst gaan we ons ruimteschip tekenen. 
+ * Daarvoor gebruiken we een Sprite. 
+ * Een Sprite kan vanalles zijn, denk aan een auto die rijdt, 
+ * een ridder die rondspringt of een ruimteschip, een vijand of een laser.
+ *
+ * In de code hieronder zie je var schip = Sprite('images/schip.png')
+ * Daarmee tekenen we ons eerste ding op het scherm en we geven het de naam schip. 
+ * Wat voor ding is het? Een Sprite met een plaatje 'images/ship.png'.
+ *
+ * Bij programmeren spreek je niet over dingen maar over variabelen. 
+ * Dus ship is een variabele, van het type Sprite.
  * 
  * De regels daar onder bepalen de plaats op het speelveld.
  * Het speelveld is zo groot als het witte vlak dat je in je browser ziet.
