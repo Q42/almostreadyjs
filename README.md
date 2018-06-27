@@ -19,10 +19,12 @@ Begin eerst eens hier, en kom dan terug!
 
 ## Beginnen
 
+We hebben een aantal oefeningen voor je klaar gezet om je op weg te helpen.
+De code voor die oefeningen zet je op je eigen computer en kan je dan zelf aan gaan programmeren.
+
 - Download de ReadyJS code: [download](https://github.com/Q42/almostreadyjs/archive/master.zip)
 - Pak het bestand uit
-- Open demos/oefening1/index.html in de browser door er op te dubbelklikken
-- Open demos/oefening1/index.js in Kladblok (Windows) of TextEdit (mac)
-- Maak de oefeningen, veel plezier!
-
-Dikke tip: vergeet je wijzigingen niet op te slaan en je browser te verversen om het resultaat te zien.
+- Open `demos/oefening1/index.html` in de browser (Chrome, Safari, Edge of Internet Explorer bijvoorbeeld). Dit werkt meestal door er op te dubbelklikken.
+- Open `demos/oefening1/index.js` in Kladblok (Windows) of TextEdit (mac).
+- Volg de aanwijzingen die je in het `js` bestand vindt. Dit doe je door de code in Kladblok/TextEdit aan te passen en op te slaan. Als je daarna je browser ververst dan werkt de nieuwe code.
+- Zo kun je één voor één de oefeningen doen, totdat je een volleerd programmeur bent en je eigen games kunt maken!
