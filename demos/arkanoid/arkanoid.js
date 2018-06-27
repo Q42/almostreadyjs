@@ -13,6 +13,7 @@ block.hide()
 speedX = 3
 speedY = -3
 blocks = SpriteList()
+
 Screen.background = '#45598b'
 
 for (x=1; x<=6; x++) {
