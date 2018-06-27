@@ -1,3 +1,8 @@
-# almostreadyjs
+# ReadyJS
 
-hoi
+## Wat kun je er mee?
+
+- [Arkanoid](demos/arkanoid)
+
+## Beginnen
+
