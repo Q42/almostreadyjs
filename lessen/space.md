@@ -6,7 +6,7 @@ In deze les gaan we een spel maken in de ruimte. Je bestuurt een ruimteschip dat
 
 Het uiteindelijke spel ziet er zo uit:
 
-![screenshot](/static/lessons/spaceshooter/full-game.jpg)
+![screenshot](images/space.jpg)
 
 ## Wat leer je in deze les?
 
