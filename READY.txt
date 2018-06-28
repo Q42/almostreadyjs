@@ -6,7 +6,7 @@
 - image preloader
 - touch controls: hoe?
 - Screen.right undefined bij start
-
+- (generate) documentation
 
 
 
