@@ -1,0 +1,16 @@
+{
+  "name": "readyjs",
+  "version": "0.0.9",
+  "description": "🦄 Javascript Game Programming For Everyone!",
+  "author": "Q42",
+  "private": true,
+  "scripts": {
+    "build": "grunt"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-uglify-es": "^3.3.0"
+  }
+}
