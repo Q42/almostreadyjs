@@ -26,11 +26,12 @@ module.exports = function(grunt) {
               'readyjs/mouse.js',
               'readyjs/screen.js',
               'readyjs/level.js',
-              'readyjs/controls.js',
-              'readyjs/viewportmaster.js',
-              'readyjs/inspector.js',
+              //'readyjs/controls.js',
+              //'readyjs/viewportmaster.js',
+              //'readyjs/inspector.js',
               'readyjs/sound.js',
-              'readyjs/log.js',
+              'readyjs/storage.js',
+              //'readyjs/log.js',
               'readyjs/spriteSheet.js'
 						],
 						dest: 'ready.js'

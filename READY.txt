@@ -4,8 +4,8 @@
 - source code in html
 - headers en meta tags branden via javascript (meta tags, touch tags, etc)
 - image preloader
-
-
+- touch controls: hoe?
+- Screen.right undefined bij start
 
 
 
