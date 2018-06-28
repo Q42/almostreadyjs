@@ -6,7 +6,7 @@ Je kent het spel wel: een bal die rondstuitert en blokjes wegtikt. En jij bestuu
 
 Het uiteindelijke spel ziet er zo uit:
 
-![screenshot](images/arkanoid.jpg)
+![screenshot](images/arkanoid.png)
 
 ## Wat leer je in deze les?
 
