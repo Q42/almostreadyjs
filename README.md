@@ -20,7 +20,7 @@ Als je nog helemaal nieuw bent met programmeren, doe dan eerst eens deze dingen 
 2. Leer visueel programmeren met [Frozen](https://studio.code.org/s/frozen/stage/1/puzzle/1)
 3. Leer basis javascript met [Silent Teacher](http://silentteacher.toxicode.fr/hourofcode)
 
-## Beginnen
+## Leer ReadyJS kennen
 
 We hebben een aantal oefeningen voor je klaar gezet om je op weg te helpen.
 De code voor die oefeningen zet je op je eigen computer en kan je dan zelf aan gaan programmeren.
@@ -28,8 +28,11 @@ De code voor die oefeningen zet je op je eigen computer en kan je dan zelf aan g
 - Download de ReadyJS code: [download](https://github.com/Q42/almostreadyjs/archive/master.zip)
 - Pak het bestand uit
 - Open `demos/oefening1/index.html` in de browser (Chrome, Safari, Edge of Internet Explorer bijvoorbeeld). Dit werkt meestal door er op te dubbelklikken.
-- Open `demos/oefening1/index.js` in Kladblok (Windows) of TextEdit (mac).
+- Open `demos/oefening1/index.html` in Kladblok (Windows) of TextEdit (mac).
 - *Optioneel: echte programmeurs gebruiken een code editor. Die helpt je bijvoorbeeld door kleurcoderingen en regelnummers. Je kunt zelf bijvoorbeeld [Visual Studio Code](https://code.visualstudio.com/) installeren, en die gebruiken in plaats van Kladblok of TextEdit.*
 - Volg de aanwijzingen die je in het `js` bestand vindt. Dit doe je door de code in Kladblok/TextEdit aan te passen en op te slaan. Als je daarna je browser ververst dan werkt de nieuwe code.
 - Zo kun je één voor één de oefeningen doen, totdat je een volleerd programmeur bent en je eigen games kunt maken!
 - Om verder te gaan is het handig om de [handleiding](handleiding.md) te printen en erbij te houden als je aan de slag gaat.
+
+## Je eigen spel maken
+

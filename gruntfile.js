@@ -33,7 +33,7 @@ module.exports = function(grunt) {
               'readyjs/log.js',
               'readyjs/spriteSheet.js'
 						],
-						dest: 'demos/readyjs.min.js'
+						dest: 'ready.js'
 					}
 				]
 			}
