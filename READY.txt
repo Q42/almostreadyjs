@@ -1,18 +1,20 @@
-- Screen.right undefined bij start
-- Screen.width / height werkt niet
-- Screen.portrait / landscape werkt niet
+x - source code in html
+x - image preloader v1
+x - Screen.right undefined bij start
+x - Screen.width / height werkt niet
+x - Screen.portrait / landscape werkt niet
+x - Game.title = 'mijn raketspel'
+x - Game.filePath = ...
+x - every(150)
 - headers en meta tags branden via javascript (meta tags, touch tags, etc)
-- Game.title = 'mijn raketspel'
-- Game.filePath = ...
-
-
+- generate css werkt niet in codepen
+- round, each, repeat, algemene functies ff nalopen op naam/werking
 - files en paden: url support (http, local, etc) + friendly base href (mijn spel instellingen ofzo, ook titel)
 - syntax: new, function, var, zonder ;
 - Versienummering (cdn/v1/ready.js)
 - image preloader v2: wacht ff en doe een reload als t nodig is
 - touch controls: hoe?
-x - source code in html
-x - image preloader v1
+- performance: render niet buiten het scherm
 
 
 

@@ -1,12 +1,18 @@
-paddle = Sprite('images/paddle.png')
+<script src="../ready.js"/></script><script>
+
+Game.title = 'Arkanoid'
+Game.author = 'Martin Kool'
+Game.path = '../files/images'
+
+paddle = Sprite('paddle.png')
 paddle.size = 20
 paddle.goto(Screen.x, Screen.bottom - 15)
 
-ball = Sprite('images/ball.png')
+ball = Sprite('ball.png')
 ball.size = 20
 ball.goto(paddle.x, paddle.y - 20)
 
-block = Sprite('images/block-yellow.png')
+block = Sprite('block-yellow.png')
 block.size = 30
 block.hide()
 
@@ -45,3 +51,5 @@ function spel() {
 }
 
 repeat(spel)
+
+</script>

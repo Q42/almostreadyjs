@@ -16,6 +16,7 @@ module.exports = function(grunt) {
 					{
 						src: [
               'readyjs/style.js',
+              'readyjs/game.js',
               'readyjs/utils.js',
               'readyjs/$.js',
               'readyjs/keyCodes.js',
@@ -34,7 +35,7 @@ module.exports = function(grunt) {
               //'readyjs/log.js',
               'readyjs/spriteSheet.js'
 						],
-						dest: 'demos/readyjs.min.js'
+						dest: 'ready.js'
 					}
 				]
 			}

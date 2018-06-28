@@ -1,14 +1,19 @@
-<script src="../readyjs.min.js"></script><script>
+<script src="../ready.js"/></script><script>
+
+Game.title = 'Pac-Man'
+Game.author = 'Lukas van Driel'
+Game.path = '../files/images'
 
 Screen.background = '#000'
 
-// sprites = SpriteSheet('images/pacman.png', 3, 4)
+sprites = SpriteSheet('pacman.png', 3, 4)
 // pacmanLeft = sprites.getSprite(1)
 
 level = Level()
 level.setTileSize(40, 40)
-level.setTile('x', 'images/maze.png', { solid: true })
-level.setTile('@', 'images/pacman.png', { solid: true, size: 40, z: 10 })
+level.setTile('x', 'maze.png', { solid: true })
+level.setTile('@', sprites.getSprite(1), { solid: true, size: 40, z: 10 })
+level.setTile('@', 'pacman.png', { solid: true, size: 40, z: 10 })
 level.load(
 'xxxxxxxxx',
 'x       x',

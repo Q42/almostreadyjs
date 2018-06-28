@@ -27,6 +27,16 @@ function contains(arr, v) {
   return false;
 }
 
+function every(ms) {
+  if (!every.last) every.last = {};
+  if (!every.last[ms]) every.last[ms] = 0;
+  if (new Date() * 1 > every.last[ms]) {
+    every.last[ms] = (new Date() * 1) + ms;
+    return true;
+  }
+  return false;
+}
+
 function between (min, max) {
   return Math.floor((Math.random() * (max - min + 1)) + min);
 }
@@ -69,6 +79,10 @@ function each(obj, f) {
       })(id)
     }
   }
+}
+
+function forever(f) {
+  repeat(f);
 }
 
 function repeat(f, count) {

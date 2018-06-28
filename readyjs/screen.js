@@ -23,7 +23,7 @@ var Screen = new (function ScreenInstance() {
 		width: 				{ value: defaultHeight, unit: 'px' },
 		height: 			{ value: defaultWidth, unit: 'px' },
 		background: 	{ value: 'white', name: 'backgroundColor' },
-		//image: 				{ value: '' },
+		image: 				{ value: undefined },
 		depth: 				{ value: 1, name: 'zIndex' },
 		left: 				{ value: 0, unit: 'px' },
 		top: 					{ value: 0, unit: 'px' },
@@ -180,7 +180,8 @@ var Screen = new (function ScreenInstance() {
 						// don't render anything for these properties
 						break;
 					case 'image':
-						cssModifiers['background-image'] = 'url(' + value + ')';
+						var imagePath = Ready.fixImageUrl(value);
+						cssModifiers['background-image'] = 'url(' + imagePath + ')';
 						break;
 					default:
 						if (prop.unit) {

@@ -20,16 +20,33 @@ Als je nog helemaal nieuw bent met programmeren, doe dan eerst eens deze dingen 
 2. Leer visueel programmeren met [Frozen](https://studio.code.org/s/frozen/stage/1/puzzle/1)
 3. Leer basis javascript met [Silent Teacher](http://silentteacher.toxicode.fr/hourofcode)
 
-## Beginnen
+## Leer ReadyJS kennen
 
 We hebben een aantal oefeningen voor je klaar gezet om je op weg te helpen.
-De code voor die oefeningen zet je op je eigen computer en kan je dan zelf aan gaan programmeren.
+De oefeningen staan in een online code editor genaamd CodePen. Je kunt onderstaande oefeningen één voor één doen, totdat je een volleerd programmeur bent en je eigen games kunt maken!
 
-- Download de ReadyJS code: [download](https://github.com/Q42/almostreadyjs/archive/master.zip)
-- Pak het bestand uit
-- Open `demos/oefening1/index.html` in de browser (Chrome, Safari, Edge of Internet Explorer bijvoorbeeld). Dit werkt meestal door er op te dubbelklikken.
-- Open `demos/oefening1/index.js` in Kladblok (Windows) of TextEdit (mac).
+- https://codepen.io/pen/?editors=1000
+
+## Zelf aan de slag!
+
+- Open Kladblok (Windows) of TextEdit (mac) en start met een leeg bestand.
+- Typ deze code er in:
+```html
+<script src="https://q42.github.io/almostreadyjs/ready.js"></script><script>
+
+</script>
+```
+- Sla het bestand op op je harde schijf, genaamd `mijnspel.html`
+- Ga nu naar een browser (Chrome, Safari, Edge of Internet Explorer bijvoorbeeld) en open `mijnspel.html`
+- Nu kun je in Kladblok/TextEdit je code typen, en in je browser het spel vervolgens spelen. 
+- *Tip: Als je je code verandert, vergeet hem niet op te slaan, en daarna je browser te verversen dan werkt de nieuwe code.*
 - *Optioneel: echte programmeurs gebruiken een code editor. Die helpt je bijvoorbeeld door kleurcoderingen en regelnummers. Je kunt zelf bijvoorbeeld [Visual Studio Code](https://code.visualstudio.com/) installeren, en die gebruiken in plaats van Kladblok of TextEdit.*
-- Volg de aanwijzingen die je in het `js` bestand vindt. Dit doe je door de code in Kladblok/TextEdit aan te passen en op te slaan. Als je daarna je browser ververst dan werkt de nieuwe code.
-- Zo kun je één voor één de oefeningen doen, totdat je een volleerd programmeur bent en je eigen games kunt maken!
-- Om verder te gaan is het handig om de [handleiding](handleiding.md) te printen en erbij te houden als je aan de slag gaat.
+
+## Volg een aantal lessen
+
+In kleine stappen wordt uitgelegd hoe je een spel maakt. Print onderstaande handleiding uit, en volg de instructies.
+De code typ je in het `mijnspel.html` bestand dat je in de vorige stap gemaakt hebt.
+
+- [Arkanoid](https://q42.github.io/almostreadyjs/lessen/arkanoid)
+- [Space shooter](https://q42.github.io/almostreadyjs/lessen/space)
+
