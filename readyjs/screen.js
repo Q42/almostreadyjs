@@ -7,6 +7,7 @@ var Screen = new (function ScreenInstance() {
 
 	var defaultWidth = 540;
 	var defaultHeight = 360;
+	var delayedStyleProperties = {}; // used for setting any Screen.style.foo = bar properties that were set before DOMready
 
 	var orientations = {
 		portrait: { width: defaultHeight, height: defaultWidth },
@@ -46,6 +47,7 @@ var Screen = new (function ScreenInstance() {
 		if (document.body) onDOMReady();
 		else Ready.onLoad(onDOMReady);
 		initGettersAndSetters()
+		// we need an initState here to set all the basic initial properties (width, height, left, top, ...)
 		initState();
 	}
 
@@ -53,7 +55,13 @@ var Screen = new (function ScreenInstance() {
 		self.$el = $('#game');
 		self.$world = $('#world');
 		adjustToOrientation();
+
+		// we need another initState here to actually SET all the user defined properties that are applied to $el
+		// (and $el is only available now)
 		//initState();
+		for (var o in delayedStyleProperties) {
+			self.$el[0].style[o] = delayedStyleProperties[o];
+		}
 	}
 
 	function adjustToOrientation() {
@@ -360,5 +368,5 @@ var Screen = new (function ScreenInstance() {
 	this.landscape = landscape;
 	this.center = center;
   this.clear = clear;
-	this.__defineGetter__('style', function() { return self.$el[0]? self.$el[0].style : {}; });
+	this.__defineGetter__('style', function() { return self.$el[0]? self.$el[0].style : delayedStyleProperties; });
 })();
