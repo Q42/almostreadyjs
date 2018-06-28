@@ -1,3 +1,5 @@
+Screen.width = 200
+
 paddle = Sprite('images/paddle.png')
 paddle.size = 20
 paddle.goto(250,450)

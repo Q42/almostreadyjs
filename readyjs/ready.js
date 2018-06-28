@@ -7,7 +7,7 @@ var Ready = new (function(){
 	var mouseDownEvt = undefined; // set to touchstart/mousedown event when set
 	var cycleInterval = 10;
 	var handlers = [];
-	var imageSizes = {};
+	var imageSizes = undefined;
 	var cycleTOH = 0;
 	var cycleNr = 0;
 
@@ -42,7 +42,6 @@ var Ready = new (function(){
 
 	function start() {
 		if (started) return;
-    Ready.Inspector.clear();
 		started = true;
 		addEventListeners();
 		for (var i in scriptsToLoad) {
@@ -244,6 +243,9 @@ var Ready = new (function(){
 	// and immediately returns it if already known
 	// also supports waiting for DOMready
 	function getImageSize(url, handler) {
+		if (!imageSizes) {
+			imageSizes = Storage.get('imageSizes', {});
+		}
 		if (!document.body) {
 			if (!getImageSize.waiting) {
 				getImageSize.waiting = [];
@@ -273,6 +275,7 @@ var Ready = new (function(){
 					width: this.width,
 					height: this.height
 				}
+				Storage.set('imageSizes', imageSizes);
 				if (handler)
 					handler(url, imageSizes[url]);
 				//document.body.removeChild(img);
@@ -283,7 +286,7 @@ var Ready = new (function(){
 	}
 
 	function onOrientationChange(value) {
-		Controls.onOrientationChange();
+		//Controls.onOrientationChange();
 	}
 
   function clear() {

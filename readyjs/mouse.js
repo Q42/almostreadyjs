@@ -15,7 +15,6 @@ window.Mouse = new (function MouseInstance(){
 
   function mousedown(evt) {
     isDown = true;
-    Ready.Inspector.click(evt, self.sprite)
   }
 
   function mouseup(evt) {
@@ -28,7 +27,6 @@ window.Mouse = new (function MouseInstance(){
     if (Screen.$el[0]) {
       x = evt.pageX - Screen.$el[0].offsetLeft;
       y = evt.pageY - Screen.$el[0].offsetTop;
-      Ready.Inspector.mousemove(evt, x, y)
     }
   }
 
