@@ -9,7 +9,6 @@ var Screen = new (function ScreenInstance() {
 		landscape: { width: 540, height: 360 }
 	}
 	var useTranslate3d = true; // used for $world mostly
-	var onScope = {};
 	var prefixes = ['-webkit-', '-moz-', '-ms-', ''];
 	var statesChanged = {};
 	var state = {
