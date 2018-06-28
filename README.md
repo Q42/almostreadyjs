@@ -33,6 +33,7 @@ De oefeningen staan in een online code editor genaamd CodePen. Je kunt onderstaa
 - Typ deze code er in:
 
 `<script src="https://q42.github.io/almostreadyjs/ready.js"></script><script>`
+
 `</script>`
 
 - Sla het bestand op op je harde schijf, genaamd `mijnspel.html`
