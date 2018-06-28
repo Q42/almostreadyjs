@@ -1,43 +1,35 @@
-Bugs & stuff
-============
-- Repeat logt soms verkeerd over repeat inside repeat
-- Platformer als je dood gaat lijkt browser te hangen
-- Automatisch reload is niet lekker, gaat nu soms mis met bv larry demo
-- Pacman: hoe combineer je level tiles met spritesheets
-- Versienummering
-
-Ready todo
-==========
-- animation = sprite.cycleTiles maar dan één keer
-- position level of sprite op Screen.center
-- slideTo is kapot
+- files en paden: url support (http, local, etc) + friendly base href (mijn spel instellingen ofzo, ook titel)
+- syntax: new, function, var, zonder ;
+- Versienummering (cdn/v1/ready.js)
+- source code in html
+- headers en meta tags branden via javascript (meta tags, touch tags, etc)
 - image preloader
 
-Ready Syntax
-==================
+
+
+
+
+
+
+
+
+
+
+
+Bugs
+====
+- Screen.right etc is kapot (als je javascript in de html include)
+- Pacman: hoe combineer je level tiles met spritesheets
+- Repeat logt soms verkeerd over repeat inside repeat
+- Platformer als je dood gaat lijkt browser te hangen
+- slideTo is kapot
+
+================================================================================================
+- animation = sprite.cycleTiles maar dan één keer
+- position level of sprite op Screen.center
 - new Sprite() zonder image == div, of Shape/Circle/...?
 - tekst op het scherm
 - say/print tekst
 - touches bgcolor
-- "game over" of "you won", misschien met tekst?
-x - level syntax
-x - SpriteSheet(image)
-x - enemies.background = 'red' -> doet het op alles
-
-UI
-==================
-- spel/les wisselaar nog nodig?
-- visual design
-
-Platform
-========
-- inloggen / registreren / wachtwoord vergeten / ...
-- google login
-- anoniem een project kunnen maken (token in localstorage?)
-- teken een achtergrond
-
-Meta
-====
-- ready.min.js
 - audio library
 - betere image library
