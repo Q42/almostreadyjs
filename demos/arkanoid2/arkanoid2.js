@@ -15,11 +15,11 @@ level.setTile('y', 'images/block-yellow.png')
 level.setTile('p', 'images/block-purple.png')
 level.setTile('w', 'images/block-grey.png', { hit: 1 })
 level.load(
-'r',
-'rg',
-'rgb',
-'rgby',
-'rgbyp',
+'r     ',
+'rg    ',
+'rgb   ',
+'rgby  ',
+'rgbyp ',
 'rgbypr',
 'wwwwww',
 )
