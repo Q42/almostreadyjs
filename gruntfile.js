@@ -2,6 +2,7 @@ module.exports = function(grunt) {
 
   //grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-uglify-es');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.initConfig({
 
@@ -37,7 +38,14 @@ module.exports = function(grunt) {
 				]
 			}
 
-		}
+    },
+    
+    watch: {
+      js: {
+        files: ['readyjs/*.js'],
+        tasks: ['min']
+      }
+    }
   });
 
   grunt.registerTask('min', ['uglify:min']);
