@@ -31,7 +31,7 @@ De oefeningen staan in een online code editor genaamd CodePen. Je kunt onderstaa
 
 - Open Kladblok (Windows) of TextEdit (mac) en start met een leeg bestand.
 - Typ deze code er in:
-```html
+```javascript
 <script src="https://q42.github.io/almostreadyjs/ready.js"></script><script>
 
 </script>
