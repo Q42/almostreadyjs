@@ -31,10 +31,11 @@ De oefeningen staan in een online code editor genaamd CodePen. Je kunt onderstaa
 
 - Open Kladblok (Windows) of TextEdit (mac) en start met een leeg bestand.
 - Typ deze code er in:
+```html
+<script src="https://q42.github.io/almostreadyjs/ready.js"></script><script>
 
-`<script src="https://q42.github.io/almostreadyjs/ready.js"></script><script>`
-`</script>`
-
+</script>
+```
 - Sla het bestand op op je harde schijf, genaamd `mijnspel.html`
 - Ga nu naar een browser (Chrome, Safari, Edge of Internet Explorer bijvoorbeeld) en open `mijnspel.html`
 - Nu kun je in Kladblok/TextEdit je code typen, en in je browser het spel vervolgens spelen. 

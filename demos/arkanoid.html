@@ -1,14 +1,18 @@
-<script src="../../ready.js"></script><script>
+<script src="../ready.js"/></script><script>
 
-paddle = Sprite('images/paddle.png')
+Game.title = 'Arkanoid'
+Game.author = 'Martin Kool'
+Game.path = '../files/images'
+
+paddle = Sprite('paddle.png')
 paddle.size = 20
-paddle.goto(250,450)
+paddle.goto(Screen.x, Screen.bottom - 15)
 
-ball = Sprite('images/ball.png')
+ball = Sprite('ball.png')
 ball.size = 20
 ball.goto(paddle.x, paddle.y - 20)
 
-block = Sprite('images/block-yellow.png')
+block = Sprite('block-yellow.png')
 block.size = 30
 block.hide()
 
@@ -25,6 +29,7 @@ for (x=1; x<=6; x++) {
 }
 
 function spel() {
+	//console.log(Mouse.x)
 	paddle.x = Mouse.x
 	if (ball.right > Screen.right) speedX = -speedX
 	if (ball.left < Screen.left) speedX = -speedX
@@ -46,4 +51,5 @@ function spel() {
 }
 
 repeat(spel)
+
 </script>

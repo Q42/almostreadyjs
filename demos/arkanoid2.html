@@ -1,21 +1,25 @@
-<script src="../../ready.js"></script><script>
+<script src="../ready.js"/></script><script>
 
-paddle = Sprite('images/paddle.png')
+Game.title = 'Arkanoid'
+Game.author = 'Martin Kool'
+Game.path = '../files/images'
+
+paddle = Sprite('paddle.png')
 paddle.size = 20
 paddle.goto(Screen.width/2, Screen.height - 50)
 
-ball = Sprite('images/ball.png')
+ball = Sprite('ball.png')
 ball.size = 20
 ball.goto(paddle.x, paddle.y - 20)
 
 level = Level()
 level.setTileSize(60, 30)
-level.setTile('r', 'images/block-red.png')
-level.setTile('g', 'images/block-green.png')
-level.setTile('b', 'images/block-blue.png')
-level.setTile('y', 'images/block-yellow.png')
-level.setTile('p', 'images/block-purple.png')
-level.setTile('w', 'images/block-grey.png', { hit: 1 })
+level.setTile('r', 'block-red.png')
+level.setTile('g', 'block-green.png')
+level.setTile('b', 'block-blue.png')
+level.setTile('y', 'block-yellow.png')
+level.setTile('p', 'block-purple.png')
+level.setTile('w', 'block-grey.png', { hit: 1 })
 level.load(
 'r     ',
 'rg    ',
@@ -83,7 +87,7 @@ repeat(arkanoid)
 function drawLives() {
   livesList.clear()
 	repeat(lives, function(i) {
-		life = Sprite('images/ball.png')
+		life = Sprite('ball.png')
 		life.size = 10
 		life.goto(i * 15 + 15, Screen.bottom - 15)
 		livesList.add(life)

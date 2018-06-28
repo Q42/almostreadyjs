@@ -290,7 +290,8 @@ function SpriteInstance(p1) {
 						// don't render anything for these properties
 						break;
 					case 'image':
-						cssModifiers['background-image'] = 'url(' + encodeURI(value) + ')';
+						var imagePath = Ready.fixImageUrl(value);
+						cssModifiers['background-image'] = 'url(' + encodeURI(imagePath) + ')';
 						break;
 					case 'fixed':
 						setFixed(value);

@@ -1,0 +1,75 @@
+<script src="../ready.js"/></script><script>
+  
+Game.title = 'Space Shooter'
+Game.author = 'Martin Kool'
+Game.path = '../files/images'
+
+Screen.image = 'space.png'
+Screen.pos = 1
+
+ship = Sprite('ship.png')
+ship.goto(250, 450)
+ship.size = 50
+ship.z = 10
+
+lasers = SpriteList()
+enemies = SpriteList()
+
+for (var nr=0; nr<10; nr++) {
+  enemy = Sprite('enemy.png')
+  enemy.size = 40;
+  enemy.x = between(0, Screen.right)
+  enemy.y = Screen.top - between(200, 500) * nr
+  enemy.speedY = between(2, 5)
+  enemy.speedX = between(-5, 5) / 10
+  enemies.add(enemy)
+}
+
+on.mousedown(function(){
+  if (every(150)) {
+    laser = Sprite('laser.png')
+    laser.size = 30
+    laser.goto(ship)
+    lasers.add(laser)
+  }
+})
+
+function spel() {
+  ship.x = Mouse.x
+
+  if (ship.left < 0) ship.left = 0
+  if (ship.right > Screen.right) ship.right = Screen.right
+
+  enemies.each(function(enemy){
+    enemy.y += enemy.speedY
+    enemy.x += enemy.speedX
+    if (enemy.top > Screen.bottom) {
+      enemy.x = between(0, Screen.right)
+      enemy.y = Screen.top - between(200, 500)
+    }
+  })
+
+  lasers.each(function(laser){
+    laser.y -= 5
+    if (laser.bottom < Screen.top) laser.remove()
+
+    enemy = laser.touches(enemies)
+    if (enemy) {
+      laser.remove()
+      enemy.x = between(0, Screen.right)
+      enemy.y = Screen.top - between(200, 500)
+    }
+  })
+
+  if (ship.touches(enemies)) {
+    ship.remove()
+    Ready.stop()
+  }
+
+
+  Screen.style.backgroundPosition = 'center ' + Screen.pos++ + 'px'
+}
+
+forever(spel)
+
+</script>

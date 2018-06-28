@@ -169,7 +169,7 @@ var Ready = new (function(){
 
 	function redraw() {
 		requestAnimFrame(redraw);
-		if (window.screen) Screen.redraw();
+		if (Screen.redraw) Screen.redraw();
 		for (var id in Sprite.sprites) {
 			var sprite = Sprite.sprites[id];
 
@@ -252,7 +252,7 @@ var Ready = new (function(){
 				onLoads.push(function(){
 					for (var i in getImageSize.waiting) {
 						var pair = getImageSize.waiting[i];
-						getImageSize(pair.url, pair.handler)
+						getImageSize(pair.url, pair.handler, true)
 					}
 					delete getImageSize.waiting;
 				})
@@ -263,7 +263,7 @@ var Ready = new (function(){
 		if (!imageSizes[url]) {
 			var img = new Image();
 			img.style = 'position:absolute;left:-9999px;top:-9999px;opacity:0';
-			img.src = url;
+			img.src = fixImageUrl(url);
 			document.getElementById('meta').appendChild(img);
 			img.onerror = function(err) {
         img.parentNode.removeChild(img);
@@ -302,6 +302,17 @@ var Ready = new (function(){
     Sound.clear();
   }
 
+  function fixImageUrl(url) {
+  	var path = url;
+  	if (Game.path) {
+  		var needsSlash = true;
+  		if (/\/$/.test(Game.path)) needsSlash = false;
+  		if (/^\//.test(url)) needsSlash = false;
+  		path = Game.path + (needsSlash?'/':'') + url;
+  	}
+  	return path;
+  }
+
 	this.start = start;
 	this.stop = stop;
   this.clear = clear;
@@ -310,6 +321,7 @@ var Ready = new (function(){
 	this.onResize = onResize;
 	this.getSpriteNames = getSpriteNames;
 	this.getImageSize = getImageSize;
+	this.fixImageUrl = fixImageUrl;
 	this.onOrientationChange = onOrientationChange;
 	this.handlers = handlers;
 	this.dispatch = dispatch;
