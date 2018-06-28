@@ -6,10 +6,10 @@ Leer stap voor stap games programmeren.
 
 Hier een aantal voorbeelden van games die gemaakt zijn in ReadyJS.
 
-- [Arkanoid](https://q42.github.io/almostreadyjs/demos/arkanoid/arkanoid.html) ([bekijk de code](https://github.com/Q42/almostreadyjs/blob/master/demos/arkanoid/arkanoid.html))
-- [Platformer game](https://q42.github.io/almostreadyjs/demos/platformer/platformer.html) ([bekijk de code](https://github.com/Q42/almostreadyjs/blob/master/demos/platformer/platformer.html))
-- [Space shooter](https://q42.github.io/almostreadyjs/demos/space/space.html) ([bekijk de code](https://github.com/Q42/almostreadyjs/blob/master/demos/space/space.html))
-- [Nog een Arkanoid](https://q42.github.io/almostreadyjs/demos/arkanoid2/arkanoid2.html) ([bekijk de code](https://github.com/Q42/almostreadyjs/blob/master/demos/arkanoid2/arkanoid2.html))
+- [Arkanoid](https://q42.github.io/almostreadyjs/demos/arkanoid.html) ([bekijk de code](https://github.com/Q42/almostreadyjs/blob/master/demos/arkanoid.html))
+- [Platformer game](https://q42.github.io/almostreadyjs/demos/platformer.html) ([bekijk de code](https://github.com/Q42/almostreadyjs/blob/master/demos/platformer.html))
+- [Space shooter](https://q42.github.io/almostreadyjs/demos/space.html) ([bekijk de code](https://github.com/Q42/almostreadyjs/blob/master/demos/space.html))
+- [Nog een Arkanoid](https://q42.github.io/almostreadyjs/demos/arkanoid2.html) ([bekijk de code](https://github.com/Q42/almostreadyjs/blob/master/demos/arkanoid2.html))
 
 ## Helemaal nieuw met programmeren?
 
