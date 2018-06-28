@@ -1,4 +1,3 @@
-<!--
 <!doctype html>
 <html>
 	<head>
@@ -15,12 +14,3 @@
 	<script src="../readyjs.min.js"></script>
   <script src="arkanoid.js"></script>
 </html>
--->
-<script>
-  var scripts = 'style,utils,$,keyCodes,Keys,ready,spriteList,sprite,mouse,screen,level,sound,storage,spriteSheet'.split(',');
-  for (var i in scripts) {
-    var name = '../../readyjs/' + scripts[i] + '.js?' + new Date() * 1;
-    document.write('<scr' + 'ipt src="' + name + '"></scr' + 'ipt>');
-  }
-</script>
-<script src="arkanoid.js"></script>

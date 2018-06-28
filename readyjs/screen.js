@@ -4,9 +4,13 @@ var Screen = new (function ScreenInstance() {
 	self.$el = $('#game');
 	self.$world = $('#world');
 	self.isScreen = true;
+
+	var defaultWidth = 540;
+	var defaultHeight = 360;
+
 	var orientations = {
-		portrait: { width: 360, height: 540 },
-		landscape: { width: 540, height: 360 }
+		portrait: { width: defaultHeight, height: defaultWidth },
+		landscape: { width: defaultWidth, height: defaultHeight }
 	}
 	var useTranslate3d = true; // used for $world mostly
 	var prefixes = ['-webkit-', '-moz-', '-ms-', ''];
@@ -16,17 +20,17 @@ var Screen = new (function ScreenInstance() {
 		rotation: 		{ value: 0, name: 'rotate', isTransform: true },
 		scaleX: 			{ value: 1, isTransform: true },
 		scaleY: 			{ value: 1, isTransform: true },
-		width: 				{ value: 360, unit: 'px' },
-		height: 			{ value: 540, unit: 'px' },
+		width: 				{ value: defaultHeight, unit: 'px' },
+		height: 			{ value: defaultWidth, unit: 'px' },
 		background: 	{ value: 'white', name: 'backgroundColor' },
-		image: 				{ value: '' },
+		//image: 				{ value: '' },
 		depth: 				{ value: 1, name: 'zIndex' },
 		left: 				{ value: 0, unit: 'px' },
 		top: 					{ value: 0, unit: 'px' },
 		x: 						{ value: undefined },
 		y: 						{ value: undefined },
-		right: 				{ value: 360, unit: 'px' },
-		bottom: 			{ value: 540, unit: 'px' },
+		right: 				{ value: defaultHeight, unit: 'px' },
+		bottom: 			{ value: defaultWidth, unit: 'px' },
 		flip: 				{ value: false },
 		flipY: 				{ value: false },
 		worldLeft: 		{ value: 0, unit: 'px' },
@@ -42,20 +46,18 @@ var Screen = new (function ScreenInstance() {
 		if (document.body) onDOMReady();
 		else Ready.onLoad(onDOMReady);
 		initGettersAndSetters()
-		//initState();
+		initState();
 	}
 
 	function onDOMReady() {
 		self.$el = $('#game');
 		self.$world = $('#world');
-
-		//var vm = ViewportMaster({element:self.$el[0], width: self.width, height: self.height})
-
 		adjustToOrientation();
-		initState();
+		//initState();
 	}
 
 	function adjustToOrientation() {
+		if (!self.$el[0]) return;
 		self.$el[0].style.visibility = 'hidden';
 		setTimeout(function() {
 			self.width = self.width;
@@ -119,9 +121,12 @@ var Screen = new (function ScreenInstance() {
 				Ready.getImageSize(value);
 				break;
 			case 'height':
+				self.top = oldState.top.value;
 				//self.marginTop = Math.floor((document.body.scrollHeight - value) / 2)
 				break;
 			case 'width':
+				self.left = oldState.left.value;
+				//console.log('width...', oldState.left.value)
 				//self.marginLeft = Math.floor((document.body.scrollWidth - value) / 2)
 				break;
 			case 'flip':

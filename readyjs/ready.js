@@ -169,7 +169,7 @@ var Ready = new (function(){
 
 	function redraw() {
 		requestAnimFrame(redraw);
-		if (window.screen) Screen.redraw();
+		if (Screen.redraw) Screen.redraw();
 		for (var id in Sprite.sprites) {
 			var sprite = Sprite.sprites[id];
 

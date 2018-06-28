@@ -1,8 +1,6 @@
-Screen.width = 200
-
 paddle = Sprite('images/paddle.png')
 paddle.size = 20
-paddle.goto(250,450)
+paddle.goto(Screen.x, Screen.bottom - 15)
 
 ball = Sprite('images/ball.png')
 ball.size = 20
@@ -25,6 +23,7 @@ for (x=1; x<=6; x++) {
 }
 
 function spel() {
+	//console.log(Mouse.x)
 	paddle.x = Mouse.x
 	if (ball.right > Screen.right) speedX = -speedX
 	if (ball.left < Screen.left) speedX = -speedX

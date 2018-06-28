@@ -1,7 +1,7 @@
 window.Mouse = new (function MouseInstance(){
   var self = this;
-  var x = 0;
-  var y = 0;
+  var x = Screen.x || 0; // center of screen if possible
+  var y = Screen.y || 0; // center of screen if possible
   var isDown = false;
   self.sprite = undefined;
 

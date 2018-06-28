@@ -1,11 +1,18 @@
+- Screen.right undefined bij start
+- Screen.width / height werkt niet
+- Screen.portrait / landscape werkt niet
+- headers en meta tags branden via javascript (meta tags, touch tags, etc)
+- Game.title = 'mijn raketspel'
+- Game.filePath = ...
+
+
 - files en paden: url support (http, local, etc) + friendly base href (mijn spel instellingen ofzo, ook titel)
 - syntax: new, function, var, zonder ;
 - Versienummering (cdn/v1/ready.js)
-- source code in html
-- headers en meta tags branden via javascript (meta tags, touch tags, etc)
-- image preloader
+- image preloader v2: wacht ff en doe een reload als t nodig is
 - touch controls: hoe?
-- Screen.right undefined bij start
+x - source code in html
+x - image preloader v1
 
 
 
