@@ -24,7 +24,7 @@ Laten we beginnen!
 
 Bijna elk ding wat je op het scherm wilt zetten is een `Sprite`. Een `Sprite` kun je verplaatsen, laten ronddraaien, groter of kleiner maken en noem maar op. Je geeft je `Sprite` meestal een plaatje. Kijk zo:
 ```javascript
-ball = Sprite('images/ball.png')
+var ball = Sprite('images/ball.png')
 ```
 Daarmee tekenen we dus ons eerste ding op het scherm en we geven het de naam `ball`. Wat voor ding is het? Een `Sprite` met een plaatje `'images/ball.png'`.
 > Bij programmeren spreek je niet over *dingen* maar over *variabelen*. Dus `ball` is een *variabele*, van het type `Sprite`.
@@ -36,7 +36,7 @@ In de volgende stap gaan we de bal ergens op het scherm zetten.
 
 ### Zo ziet je code er nu uit
 ```javascript
-ball = Sprite('images/ball.png')
+var ball = Sprite('images/ball.png')
 ball.size = 20
 ```
 
@@ -62,7 +62,7 @@ Probeer maar eens!
 
 ### Zo ziet je code er nu uit
 ```javascript
-ball = Sprite('images/ball.png')
+var ball = Sprite('images/ball.png')
 ball.size = 20
 ball.x = 20
 ball.y = 350
@@ -74,7 +74,7 @@ Je hebt geleerd dat je een `Sprite` op een plek kunt zetten door zijn `x` en `y`
 
 Zullen we dat gaan doen? Voeg dit toe:
 ```javascript
-on.gameloop(function(){
+on.gameloop(function moveBall() {
   ball.move(1, -1)
 })
 ```
@@ -87,12 +87,12 @@ Als je maar één keer je bal zou verplaatsen dan zie je hem niet echt op je bee
 Een lege `gameloop` schrijf je zo:
 
 ```javascript
-on.gameloop(function(){
+on.gameloop(function spel() {
   // doe hier wat je wilt
 })
 ```
 
-Met `on.` kun je luisteren naar iets dat gebeurt. Een klik van de muis, een druk op een toets, of in dit geval het opnieuw uitvoeren van een `gameloop`. Met `function(){` start je een nieuw stuk code en sluit je af met `}`. Omdat we beginnen met`on.gameloop(` is het laatste `)` haakje ook nodig.
+Met `on.` kun je luisteren naar iets dat gebeurt. Een klik van de muis, een druk op een toets, of in dit geval het opnieuw uitvoeren van een `gameloop`. Met `function() {` start je een nieuw stuk code en sluit je af met `}`. Omdat we beginnen met`on.gameloop(` is het laatste `)` haakje ook nodig.
 
 ### Zo ziet je code er nu uit
 ```javascript
@@ -101,7 +101,7 @@ ball.size = 20
 ball.x = 20
 ball.y = 350
 
-on.gameloop(()=>{
+on.gameloop(function moveBall() {
   ball.move(1, -1)
 })
 ```
@@ -115,21 +115,27 @@ Screen.image = 'images/space.png'
 Nu gaan we in de  `gameloop` programmeren dat je het ruimteschip niet buiten de randen van het scherm kunt bewegen. Dat doe je zo:
 
 ```javascript
-on.gameloop(function(e) {
+on.gameloop(function() {
   ship.x = Mouse.x
 
-  if (ship.left < 0) ship.left = 0
-  if (ship.right > Screen.right) ship.right = Screen.right
+  if (ship.left < 0) {
+    ship.left = 0
+  }
+  if (ship.right > Screen.right) {
+    ship.right = Screen.right
+  }
 })
 ```
 De linkerkant van het scherm heeft `x` waarde 0. We willen niet dat de linkerkant van ons schip (`ship.left`) verder kan dan 0. Daarom zeggen we:
 
 "als `ship.left` kleiner is dan 0, maak dan `ship.left` 0"
 
-Dat is deze regel code:
+Dat is deze regels code:
 
 ```javascript
-if (ship.left < 0) ship.left = 0
+if (ship.left < 0) {
+  ship.left = 0
+}
 ```
 De andere regel doet hetzelfde, maar dan voor de rechterkant van het scherm. `Screen.right` heeft altijd de waarde van die rechterkant, dus zeggen we:
 
@@ -143,11 +149,15 @@ ship = Sprite('images/ship.png')
 ship.goto(250, 450)
 ship.size = 50
 
-on.gameloop(function(e) {
+on.gameloop(function() {
   ship.x = Mouse.x
 
-  if (ship.left < 0) ship.left = 0
-  if (ship.right > Screen.right) ship.right = Screen.right
+  if (ship.left < 0) {
+    ship.left = 0
+  }
+  if (ship.right > Screen.right) {
+    ship.right = Screen.right
+  }
 })
 ```
 
@@ -264,7 +274,7 @@ ship.size = 50
 
 lasers = SpriteList()
 
-on.click(function(){
+on.click(function() {
   laser = Sprite('images/laser.png')
   laser.size = 30
   laser.goto(ship)
@@ -346,7 +356,7 @@ for (var nr=0; nr<10; nr++) {
   enemies.add(enemy)
 }
 
-on.click(function(){
+on.click(function() {
   laser = Sprite('images/laser.png')
   laser.size = 30
   laser.goto(ship)
