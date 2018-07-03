@@ -8,7 +8,7 @@ x - Game.filePath = ...
 x - every(150)
 - headers en meta tags branden via javascript (meta tags, touch tags, etc)
 - generate css werkt niet in codepen (https://codepen.io/anon/pen/ERJWpL?editors=1000)
-- round, each, repeat, algemene functies ff nalopen op naam/werking
+- round, each, repeat, forever, algemene functies ff nalopen op naam/werking
 - files en paden: url support (http, local, etc) + friendly base href (mijn spel instellingen ofzo, ook titel)
 - syntax: new, function, var, zonder ;
 x Versienummering (https://q42.github.io/almostreadyjs/dist/ready-0.0.9.js)
@@ -44,3 +44,15 @@ Bugs
 - touches bgcolor
 - audio library
 - betere image library
+
+
+Mexx, een buurjongen van Stef, is het nu aan t uitproberen. Mijn notes tot nu toe:
+- silent teacher werkt supergoed
+- hoe open ik kladblok?
+- demo wil je direct copy paste draaien, dus die moet linken naar readyjs & files op cdn
+- IE is standaard browser, die geeft een activex melding :confused:
+- chrome heeft geen open file knop, daar moet je ctrl+o doen om de game te openen
+- ook de lessen moeten met files van CDN werken, dus game.path er in hebben
+- bij het doen van een les, volgt hij netjes de hele handleiding maar checkt niet tussendoor of z'n spel werkt. Dus nu bij stap 6 vraag ik of hij z'n spel wil laten zien en dan zit er een fout op regel 2 (`sprite()` zonder hoofdletter). Dus goed uitleggen dat ze na elke stap moeten spelen, en ook de console uitleggen, dat ze zien wat er mis gaat. (edited)
+- de demo's bevatten nog veel onuitlegbare shorthands, zoals `player.x -= 4` en `if (a) doeDit`. het moet echt nette javascript zijn anders snapt hij er niks van
+x setTimeout mist

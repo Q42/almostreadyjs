@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "build": "grunt",
-    "watch": "grunt watch",
+    "watch": "grunt && grunt watch",
     "deploy": "grunt"
   },
   "dependencies": {},

@@ -115,3 +115,7 @@ function repeat(f, count) {
 function round() {
   return Math.round.apply(Math, arguments);
 }
+
+function wait(ms, f) {
+  setTimeout(f.bind(this), ms);
+}
