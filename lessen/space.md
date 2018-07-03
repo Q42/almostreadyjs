@@ -20,6 +20,18 @@ Het uiteindelijke spel ziet er zo uit:
 
 Laten we beginnen!
 
+## Beginnen
+
+Begin met een nieuw bestand in Kladblok (Windows) of TextEdit (Mac) waarin je ReadyJS en de afbeeldingen inlaadt. Dat doe je met deze regels code:
+
+`<script src="https://q42.github.io/almostreadyjs/ready.js"/></script><script>`
+
+`Game.path = 'https://storage.googleapis.com/readyjs-filesimages/_demos'`
+
+`// Jouw code gaat hier!`
+
+`</script>`
+
 ## Stap 1: een "ding" maken
 
 Als eerst gaan we ons ruimteschip tekenen. Daarvoor gebruiken we een `Sprite`. Een `Sprite` kan vanalles zijn, denk aan een auto die rijdt, een ridder die rondspringt of een ruimteschip, een vijand of een laser.
