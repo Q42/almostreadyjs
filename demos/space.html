@@ -7,16 +7,17 @@ Game.path = '../files/images'
 Screen.image = 'space.png'
 Screen.pos = 1
 
-ship = Sprite('ship.png')
-ship.goto(250, 450)
+var ship = Sprite('ship.png')
+ship.x = 250
+ship.y = 450
 ship.size = 50
 ship.z = 10
 
-lasers = SpriteList()
-enemies = SpriteList()
+var lasers = SpriteList()
+var enemies = SpriteList()
 
-for (var nr=0; nr<10; nr++) {
-  enemy = Sprite('enemy.png')
+for (var nr = 0; nr < 10; nr = nr + 1) {
+  var enemy = Sprite('enemy.png')
   enemy.size = 40;
   enemy.x = between(0, Screen.right)
   enemy.y = Screen.top - between(200, 500) * nr
@@ -25,9 +26,9 @@ for (var nr=0; nr<10; nr++) {
   enemies.add(enemy)
 }
 
-on.mousedown(function(){
+on.mousedown(function shootLaser(){
   if (every(150)) {
-    laser = Sprite('laser.png')
+    var laser = Sprite('laser.png')
     laser.size = 30
     laser.goto(ship)
     lasers.add(laser)
@@ -37,21 +38,27 @@ on.mousedown(function(){
 function spel() {
   ship.x = Mouse.x
 
-  if (ship.left < 0) ship.left = 0
-  if (ship.right > Screen.right) ship.right = Screen.right
+  if (ship.left < 0) {
+    ship.left = 0
+  }
+  if (ship.right > Screen.right) {
+    ship.right = Screen.right
+  }
 
   enemies.each(function(enemy){
-    enemy.y += enemy.speedY
-    enemy.x += enemy.speedX
+    enemy.y = enemy.y + enemy.speedY
+    enemy.x = enemy.x + enemy.speedX
     if (enemy.top > Screen.bottom) {
       enemy.x = between(0, Screen.right)
       enemy.y = Screen.top - between(200, 500)
     }
   })
 
-  lasers.each(function(laser){
-    laser.y -= 5
-    if (laser.bottom < Screen.top) laser.remove()
+  lasers.each(function moveLaser(laser){
+    laser.y = laser.y - 5
+    if (laser.bottom < Screen.top) {
+      laser.remove()
+    }
 
     enemy = laser.touches(enemies)
     if (enemy) {
@@ -65,7 +72,6 @@ function spel() {
     ship.remove()
     Ready.stop()
   }
-
 
   Screen.style.backgroundPosition = 'center ' + Screen.pos++ + 'px'
 }

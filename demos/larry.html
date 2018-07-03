@@ -9,20 +9,36 @@ Screen.image = 'picture11.png'
 Screen.style.backgroundSize = '100% 100%'
 Screen.style.imageRendering = 'pixelated'
 
-player = SpriteSheet('view000.png', 8, 4).getSprite(1)
-player.goto(100, 260)
+var player = SpriteSheet('view000.png', 8, 4).getSprite(1)
+player.x = 100
+player.y = 260
 player.size = 70
 
 Sprite('picture011-14.png').set({height:312,width:640,z:312,left:0,top:0})
 
-repeat(function(e){
+function spel(e){
   player.z = player.bottom + 1
+  
   if (every(30)) {
-    if (Keys.down('down')) player.cycleTiles(17,18,19,20,21,22).move('y',3)
-    if (Keys.down('up')) player.cycleTiles(25,26,27,28,29,30).move('y', -3)
-    if (Keys.down('right')) player.cycleTiles(1,2,3,4,5,6,7,8).move('x', 5)
-    if (Keys.down('left')) player.cycleTiles(9,10,11,12,13,14,15,16).move('x', -5)
+    if (Keys.down('down')) {
+      player.cycleTiles(17,18,19,20,21,22)
+      player.move('y',3)
+    }
+    else if (Keys.down('up')) {
+      player.cycleTiles(25,26,27,28,29,30)
+      player.move('y', -3)
+    }
+    else if (Keys.down('right')) {
+      player.cycleTiles(1,2,3,4,5,6,7,8)
+      player.move('x', 5)
+    }
+    else if (Keys.down('left')) {
+      player.cycleTiles(9,10,11,12,13,14,15,16)
+      player.move('x', -5)
+    }
   }
-})
+}
+
+forever(spel)
 
 </script>

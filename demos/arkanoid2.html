@@ -4,15 +4,17 @@ Game.title = 'Arkanoid'
 Game.author = 'Martin Kool'
 Game.path = '../files/images'
 
-paddle = Sprite('paddle.png')
+var paddle = Sprite('paddle.png')
 paddle.size = 20
-paddle.goto(Screen.width/2, Screen.height - 50)
+paddle.x = Screen.width/2
+paddle.y = Screen.height - 50
 
-ball = Sprite('ball.png')
+var ball = Sprite('ball.png')
 ball.size = 20
-ball.goto(paddle.x, paddle.y - 20)
+ball.x = paddle.x
+ball.y = paddle.y - 20
 
-level = Level()
+var level = Level()
 level.setTileSize(60, 30)
 level.setTile('r', 'block-red.png')
 level.setTile('g', 'block-green.png')
@@ -33,40 +35,64 @@ level.draw(0, 30)
 
 blocks = level.getSpriteList('rgbypw')
 
-sticky = true
-speedX = 3
-speedY = -3
-lives = 3
-livesList = SpriteList()
+var sticky = true
+var speedX = 3
+var speedY = -3
+var lives = 3
+var livesList = SpriteList()
 Screen.background = '#45598b'
+
+function unStick() {
+	sticky = false
+}
+on.click(unStick)
+
+function drawLife(i) {
+	life = Sprite('ball.png')
+	life.size = 10
+	life.x = i * 15 + 15
+	life.y = Screen.bottom - 15
+	livesList.add(life)
+}
+
+function drawLives() {
+	livesList.clear()	
+	repeat(lives, drawLife)
+}
 
 drawLives()
 
-on.click(function(e) { sticky = false })
-
-function arkanoid() {
+function spel() {
 	paddle.x = Mouse.x
-	if (ball.right > Screen.right) speedX = -speedX
-	if (ball.left < Screen.left) speedX = -speedX
-	if (ball.top < Screen.top) speedY = -speedY
+	if (ball.right > Screen.right) {
+		speedX = speedX * -1
+	}
+	if (ball.left < Screen.left) {
+		speedX = speedX * -1
+	}
+	if (ball.top < Screen.top) {
+		speedY = speedY * -1
+	}
 	if (ball.bottom > Screen.bottom) {
-		lives--
+		lives = lives - 1
 		drawLives()
 		if (lives >= 0) {
 			sticky = true
-			speedY = -speedY
+			speedY = speedY * -1
 		}
-		else Ready.stop()
+		else {
+			Ready.stop()
+		}
 	}
 
 	if (ball.touches(paddle) && speedY > 0) {
 		speedX = 3 * (ball.x - paddle.x) / (paddle.width / 2)
-		speedY = -speedY
+		speedY = speedY * -1
 	}
 
 	var hitBlock = ball.touches(blocks)
 	if (hitBlock) {
-		speedY = -speedY
+		speedY = speedY * -1
 		if (hitBlock.hit == 1) {
 			hitBlock.hit = 0
 			hitBlock.transparency = 0.5
@@ -76,21 +102,15 @@ function arkanoid() {
 		}
 	}
 
-	if (sticky)
-		ball.goto(paddle.x, paddle.y - 20)
-	else
+	if (sticky) {
+		ball.x = paddle.x
+		ball.y = paddle.y - 20
+	}
+	else {
 		ball.move(speedX, speedY)
+	}
 }
 
-repeat(arkanoid)
+forever(spel)
 
-function drawLives() {
-  livesList.clear()
-	repeat(lives, function(i) {
-		life = Sprite('ball.png')
-		life.size = 10
-		life.goto(i * 15 + 15, Screen.bottom - 15)
-		livesList.add(life)
-	})
-}
 </script>
