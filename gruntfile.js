@@ -1,3 +1,5 @@
+var pkg = require('./package.json');
+
 module.exports = function(grunt) {
 
   //grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -35,12 +37,11 @@ module.exports = function(grunt) {
       },
       dist: {
         src: files,
-        dest: 'ready.dev.js',
+        dest: `dist/ready-${pkg.version}.dev.js`,
       },
     },
 
 		uglify : {
-
 		  min : {
 		  	options: {
 		  		mangle: false
@@ -48,11 +49,10 @@ module.exports = function(grunt) {
 				files: [
 					{
 						src: files,
-						dest: 'ready.js'
+            dest: `dist/ready-${pkg.version}.js`,
 					}
 				]
 			}
-
     },
     
     watch: {

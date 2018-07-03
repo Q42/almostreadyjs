@@ -24,7 +24,7 @@ Laten we beginnen!
 
 Begin met een nieuw bestand in Kladblok (Windows) of TextEdit (Mac) waarin je ReadyJS en de afbeeldingen inlaadt. Dat doe je met deze regels code:
 
-`<script src="https://q42.github.io/almostreadyjs/ready.js"/></script><script>`
+`<script src="https://q42.github.io/almostreadyjs/dist/ready-0.0.9.js"/></script><script>`
 
 `Game.path = 'https://storage.googleapis.com/readyjs-filesimages/_demos'`
 

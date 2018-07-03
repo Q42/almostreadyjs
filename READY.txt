@@ -7,11 +7,11 @@ x - Game.title = 'mijn raketspel'
 x - Game.filePath = ...
 x - every(150)
 - headers en meta tags branden via javascript (meta tags, touch tags, etc)
-- generate css werkt niet in codepen
+- generate css werkt niet in codepen (https://codepen.io/anon/pen/ERJWpL?editors=1000)
 - round, each, repeat, algemene functies ff nalopen op naam/werking
 - files en paden: url support (http, local, etc) + friendly base href (mijn spel instellingen ofzo, ook titel)
 - syntax: new, function, var, zonder ;
-- Versienummering (cdn/v1/ready.js)
+x Versienummering (https://q42.github.io/almostreadyjs/dist/ready-0.0.9.js)
 - image preloader v2: wacht ff en doe een reload als t nodig is
 - touch controls: hoe?
 - Screen.right undefined bij start

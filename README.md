@@ -34,7 +34,7 @@ De oefeningen staan in een online code editor genaamd CodePen. Je kunt onderstaa
 - Open Kladblok (Windows) of TextEdit (mac) en start met een leeg bestand.
 - Typ deze code er in:
 
-`<script src="https://q42.github.io/almostreadyjs/ready.js"></script><script>`
+`<script src="https://q42.github.io/almostreadyjs/dist/ready-0.0.9.js"></script><script>`
 
 `Game.path = 'https://storage.googleapis.com/readyjs-files'`
 
