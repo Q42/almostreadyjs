@@ -10,6 +10,8 @@ Hier een aantal voorbeelden van games die gemaakt zijn in ReadyJS.
 - [Platformer game](https://q42.github.io/almostreadyjs/demos/platformer.html) ([bekijk de code](https://github.com/Q42/almostreadyjs/blob/master/demos/platformer.html))
 - [Space shooter](https://q42.github.io/almostreadyjs/demos/space.html) ([bekijk de code](https://github.com/Q42/almostreadyjs/blob/master/demos/space.html))
 - [Nog een Arkanoid](https://q42.github.io/almostreadyjs/demos/arkanoid2.html) ([bekijk de code](https://github.com/Q42/almostreadyjs/blob/master/demos/arkanoid2.html))
+- [Pacman](https://q42.github.io/almostreadyjs/demos/pacman.html) ([bekijk de code](https://github.com/Q42/almostreadyjs/blob/master/demos/pacman.html)) (nog in ontwikkeling!)
+- [Larry](https://q42.github.io/almostreadyjs/demos/larry.html) ([bekijk de code](https://github.com/Q42/almostreadyjs/blob/master/demos/larry.html)) (nog in ontwikkeling!)
 
 ## Helemaal nieuw met programmeren?
 
@@ -34,6 +36,8 @@ De oefeningen staan in een online code editor genaamd CodePen. Je kunt onderstaa
 
 `<script src="https://q42.github.io/almostreadyjs/ready.js"></script><script>`
 
+`Game.path = 'https://storage.googleapis.com/readyjs-files'`
+
 `</script>`
 
 - Sla het bestand op op je harde schijf, genaamd `mijnspel.html`
@@ -47,6 +51,6 @@ De oefeningen staan in een online code editor genaamd CodePen. Je kunt onderstaa
 In kleine stappen wordt uitgelegd hoe je een spel maakt. Print onderstaande handleiding uit, en volg de instructies.
 De code typ je in het `mijnspel.html` bestand dat je in de vorige stap gemaakt hebt.
 
-- [Arkanoid](https://q42.github.io/almostreadyjs/lessen/arkanoid)
 - [Space shooter](https://q42.github.io/almostreadyjs/lessen/space)
+- [Arkanoid](https://q42.github.io/almostreadyjs/lessen/arkanoid) (nog in ontwikkeling!)
 
