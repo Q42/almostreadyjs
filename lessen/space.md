@@ -26,7 +26,7 @@ Begin met een nieuw bestand in Kladblok (Windows) of TextEdit (Mac) waarin je Re
 
 `<script src="https://q42.github.io/almostreadyjs/dist/ready-0.0.9.js"/></script><script>`
 
-`Game.path = 'https://storage.googleapis.com/readyjs-filesimages/_demos'`
+`Game.path = 'https://storage.googleapis.com/readyjs-files/images/_demos'`
 
 `// Jouw code gaat hier!`
 
