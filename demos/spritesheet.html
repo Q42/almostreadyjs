@@ -1,0 +1,31 @@
+<script src="../dist/ready-0.0.9.js"/></script><script>
+
+  Game.path = '../files/images'
+
+  var plaatje = 'maze.png'
+  var plaatjesNaastElkaar = 10
+  var plaatjesOnderElkaar = 10
+
+  // var plaatje = 'pacman.png'
+  // var plaatjesNaastElkaar = 3
+  // var plaatjesOnderElkaar = 4
+
+  var sheet = SpriteSheet(plaatje, plaatjesNaastElkaar, plaatjesOnderElkaar)
+  var padding = 1.2
+  var spriteSize = Math.floor(Screen.width / (plaatjesNaastElkaar * padding))
+  Screen.background = '#fff'
+
+  // wait for image to load
+  wait(100, function() {
+    repeat(plaatjesNaastElkaar, function(i) {
+      repeat(plaatjesOnderElkaar, function(j) {
+        var sprite = sheet.getSprite(i + 1, j + 1)
+        sprite.size = spriteSize
+        sprite.x = i * sprite.width * padding + 20
+        sprite.y = j * sprite.height * padding + 20
+        sprite.style.border = '1px solid red'
+      })
+    })
+  })
+
+</script>
