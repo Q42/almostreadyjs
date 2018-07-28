@@ -121,6 +121,13 @@ function SpriteSheetInstance(image, columns, rows) {
     each(spritesBasedOnSheet, updateSprite);
   }
 
+  function setTileOnSprite(sprite, tx, ty, tx2, ty2) {
+    spritesBasedOnSheet.add(sprite);
+    sprite.image = image;
+    sprite.sheet = self;
+    sprite.setTile(tx, ty, tx2, ty2);
+	}
+
   // update a single sprite based on full known sheet info
   function updateSprite(sprite) {
     sprite.setTile();
@@ -128,4 +135,5 @@ function SpriteSheetInstance(image, columns, rows) {
 
   this.setGridSize = setGridSize;
   this.getSprite = getSprite;
+  this.setTileOnSprite = setTileOnSprite;
 }

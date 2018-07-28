@@ -6,14 +6,11 @@ Game.path = '../files/images'
 
 Screen.background = '#000'
 
-// var sprites = SpriteSheet('pacman.png', 3, 4)
-// var pacmanLeft = sprites.getSprite(1)
-
 var level = Level()
 level.setTileSize(40, 40)
-level.setTile('x', 'maze.png', { solid: true })
+level.setTile('x', 'grassCenter.png', { solid: true })
 // level.setTile('@', pacmanLeft, { solid: true, size: 40, z: 10 })
-level.setTile('@', 'pacman.png', { solid: true, size: 40, z: 10 })
+level.setTile('@', { solid: true, size: 30, z: 10 })
 level.load(
 'xxxxxxxxx',
 'x       x',
@@ -27,7 +24,9 @@ level.load(
 )
 level.draw()
 
+var sprites = SpriteSheet('pacman.png', 3, 4)
 var player = level.getSprite('@')
+sprites.setTileOnSprite(player, 1);
 
 var rotation = null
 on.keypress('left', function() { rotation = 180 });
